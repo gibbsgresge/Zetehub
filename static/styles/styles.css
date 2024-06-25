@@ -450,15 +450,14 @@ main {
   display: flex;
   flex-direction: column; /* Change to column to stack items vertically */
   justify-content: center;
-  align-items: flex-start; /* Align items to the start */
-  width: 80%; /* Define a width */
+  align-items: center; /* Align items to the center */
+  width: 99%; /* Define a width */
   margin: 0 auto; /* Center the bio section */
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: black;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding-left: 40rem; 
 }
 
 .bio img {
@@ -477,13 +476,13 @@ main {
 
 .bio h1,.bio h3, .bio p {
   margin: 10px 0; /* Add margin to create spacing between items */
-  text-align: left;
+  text-align: center;
 }
 
 
 .bio h3, .bio h2, .bio h1 {
   margin: 10px 0; /* Add margin to create spacing between items */
-  text-align: left;  
+  text-align: center;  
   transition: inset .3s .3s ease-out;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 600;

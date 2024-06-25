@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Screen</title> 
+    <title>Member Details</title> 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
 </head>
 
@@ -20,31 +20,31 @@
         </div>
       </div>
       <div class="bio">
-        <img src="../static/images/wesley.JPG" alt="">
+        <img src="{{ url_for('static', filename='images/'  + '/' + member.image_url.replace('%20', '')) }}" alt="">
         
         <div class="name">
             <h1>Name</h1>
-            <p>Wesley Tedford</p>
+            <p>{{ member.name }}</p>
         </div>
         
         <div class="major">
             <h2>Major</h2>
-            <p>Mechanical Engineer</p>
+            <p>{{ member.major }}</p>
         </div>
         
         <div class="year-graduating">
             <h2>Year Graduating</h2>
-            <p>2025</p>
+            <p>{{ member.year_graduating }}</p>
         </div>
         
         <div class="linkedin">
             <h3>LinkedIn</h3>
-            <p>url here</p>
+            <p>{{ member.linkedin_url }}</p>
         </div>
         
         <div class="email">
             <h3>Email</h3>
-            <p>Email here</p>
+            <p>{{ member.email }}</p>
         </div>
         
         <div class="phone-number">
@@ -53,3 +53,4 @@
         </div>
     </div>
 </body>
+</html>
