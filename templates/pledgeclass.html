@@ -27,21 +27,20 @@
     <main>
         <div class="cards-container">
             {% for member in members %}
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/' + '/' + member.image_url.replace('%20', '') ) }}" alt="{{ member.name }}">
-                <div class="card-content">
-                    <p>
-                        {{ member.name }}, A {{ member.major }} Graduating May {{ member.year_graduating }}
-                    </p>
-                    <h2>{{ member.name }}</h2>
-                    <a href="/personal/{{ member.id }}" class="button">
-                        Find out more 
+            <a href="/personal/{{ member.id }}">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/' + '/' + member.image_url.replace('%20', '') ) }}" alt="{{ member.name }}">
+                    <div class="card-content">
+                        <p>
+                            {{ member.name }}, A {{ member.major }} Graduating May {{ member.year_graduating }}
+                        </p>
+                        <h2>{{ member.name }}</h2>
                         <span class="material-symbols-outlined">
                             arrow_right_alt
                         </span>
-                    </a>
+                    </div>
                 </div>
-            </div>
+            </a>
             {% endfor %}
         </div>
     </main>

@@ -28,15 +28,17 @@ def pledgeclass(pledge_class):
     # Pass the pledge_class to the template
     return render_template('pledgeclass.html', members=members, pledge_class=pledge_class)
 
-@app.route('/personal/<int:member_id>')  # Use int:member_id to capture the member ID
+@app.route('/personal/<int:member_id>')  
 def personal(member_id):
     conn = get_db_connection()
     member = conn.execute(
         'SELECT * FROM members WHERE id = ?', (member_id,)
     ).fetchone()
-    conn.close()
-    return render_template('personal.html', member=member) 
 
+    # Access pledge_class using the column name as a key
+    pledge_class = member['pledge_class']
+    conn.close()
+    return render_template('personal.html', member=member, pledge_class=pledge_class)
 
 #database operations
 def get_db_connection():
