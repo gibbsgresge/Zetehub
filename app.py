@@ -43,7 +43,7 @@ def personal(member_id):
 #database operations
 def get_db_connection():
     conn = sqlite3.connect('src/Database/fraternity.db')
-    conn.row_factory = sqlite3.Row  # For easy dictionary-like access
+    conn.row_factory = sqlite3.Row  
     return conn
 
 
