@@ -4,7 +4,7 @@ conn = sqlite3.connect('fraternity.db')
 cursor = conn.cursor()
 
 # Update the image URL for a specific brother
-cursor.execute("UPDATE members SET image_url = 'ZachLandow.JPEG' WHERE id = 5")
+cursor.execute("UPDATE members SET image_url = 'RyanJones.JPG' WHERE id = 6")
 cursor.execute("UPDATE members SET image_url = 'Kuzi2.JPEG' WHERE id = 3")
 cursor.execute("UPDATE members SET image_url = 'JoshMontovano.JPEG' WHERE id = 10")
 cursor.execute("UPDATE members SET image_url = 'NicolasCorica.JPEG' WHERE id = 21")
